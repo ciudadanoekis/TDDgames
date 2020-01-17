@@ -1,5 +1,8 @@
 package com.laClinik.main;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class FizzBuzz {
 
     public String process(int i) {
@@ -21,5 +24,11 @@ public class FizzBuzz {
     }
     public boolean isMultipleOfFive(int i) {
         return i % 5 == 0;
+    }
+
+    public String execute(int[] number) {
+        return Arrays.stream(number)
+                .mapToObj(this::process)
+                .collect(Collectors.joining(", "));
     }
 }

@@ -9,13 +9,14 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 
 public class MyClassTest {
+    //Calculator
     @Test
     public void testAddition() {
         Calculator calculator = new Calculator();
 
         Assert.assertEquals(4, calculator.add(2,2));
     }
-
+    //Greetings
     @Test
     public void getMessage_whenInitWithGreet_returnsGreet() {
         Greetings greetings = new Greetings("Hello World");
@@ -33,10 +34,15 @@ public class MyClassTest {
         Assert.assertThat(fizzBuzz.process(6), is("Fizz"));
         Assert.assertThat(fizzBuzz.process(10), is("Buzz"));
         Assert.assertThat(fizzBuzz.process(15), is("Fizz Buzz"));
-
-
-
     }
 
+    @Test
+    public void shouldExecute() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        Assert.assertThat(fizzBuzz.execute(new int[] {1}), is("1"));
+        Assert.assertThat(fizzBuzz.execute(new int[] {1, 2, 3, 5, 6, 10, 15, 30}),
+                is("1, 2, Fizz, Buzz, Fizz, Buzz, Fizz Buzz, Fizz Buzz"));
+    }
 
 }

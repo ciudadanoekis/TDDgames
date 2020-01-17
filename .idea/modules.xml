@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ElListo.iml" filepath="$PROJECT_DIR$/ElListo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TDDgames.iml" filepath="$PROJECT_DIR$/TDDgames.iml" />
     </modules>
   </component>
 </project>
