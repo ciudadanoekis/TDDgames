@@ -28,6 +28,14 @@ public class MyClassTest {
 
         Assert.assertThat(fizzBuzz.process(1), is("1"));
         Assert.assertThat(fizzBuzz.process(2), is("2"));
+        Assert.assertThat(fizzBuzz.process(3), is("Fizz"));
+        Assert.assertThat(fizzBuzz.process(5), is("Buzz"));
+        Assert.assertThat(fizzBuzz.process(6), is("Fizz"));
+        Assert.assertThat(fizzBuzz.process(10), is("Buzz"));
+        Assert.assertThat(fizzBuzz.process(15), is("Fizz Buzz"));
+
+
+
     }
 
 
