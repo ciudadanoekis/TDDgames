@@ -25,8 +25,10 @@ public class MyClassTest {
     @Test
     public void testeo() {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        String output = fizzBuzz.process(1);
-        Assert.assertThat(output, is("1"));
+
+        Assert.assertThat(fizzBuzz.process(1), is("1"));
+        Assert.assertThat(fizzBuzz.process(2), is("2"));
     }
+
 
 }
