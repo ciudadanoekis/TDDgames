@@ -1,6 +1,7 @@
 package com.laClinik.TestRoot;
 
 import com.laClinik.main.Calculator;
+import com.laClinik.main.Dna;
 import com.laClinik.main.FizzBuzz;
 import com.laClinik.main.Greetings;
 import org.junit.Assert;
@@ -24,7 +25,7 @@ public class MyClassTest {
     }
     //Fizz Buzz
     @Test
-    public void testeo() {
+    public void testFizzBuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         Assert.assertThat(fizzBuzz.process(1), is("1"));
@@ -43,6 +44,30 @@ public class MyClassTest {
         Assert.assertThat(fizzBuzz.execute(new int[] {1}), is("1"));
         Assert.assertThat(fizzBuzz.execute(new int[] {1, 2, 3, 5, 6, 10, 15, 30}),
                 is("1, 2, Fizz, Buzz, Fizz, Buzz, Fizz Buzz, Fizz Buzz"));
+    }
+
+    //DnaStrand Problem
+    @Test
+    public void testDna() {
+        Dna dna = new Dna();
+
+        Assert.assertThat(dna.checkDna("A"), is("T"));
+        Assert.assertThat(dna.checkDna("C"), is("G"));
+        Assert.assertThat(dna.checkDna("T"), is("A"));
+        Assert.assertThat(dna.checkDna("G"), is("C"));
+    }
+    @Test
+    public void shouldTestDna() {
+        Dna dna = new Dna();
+
+        Assert.assertThat(dna.checkDna("AAA"), is("TTT"));
+        Assert.assertThat(dna.checkDna("TTT"), is("AAA"));
+        Assert.assertThat(dna.checkDna("CCC"), is("GGG"));
+        Assert.assertThat(dna.checkDna("GGG"), is("CCC"));
+        Assert.assertThat(dna.checkDna("GCA"), is("CGT"));
+        Assert.assertThat(dna.checkDna("CATA"), is("GTAT"));
+        Assert.assertThat(dna.checkDna("ACGT"), is("TGCA"));
+
     }
 
 }
